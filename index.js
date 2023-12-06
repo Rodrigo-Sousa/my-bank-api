@@ -13,6 +13,9 @@ const { readFile, writeFile } = fs;
 // Instanciando o express
 const app = express();
 
+// Variável global
+global.fileName = "accounts.json";
+
 // Solicitando ao express que utilize JSON, para as requisições que iremos utilizar.
 app.use(express.json());
 
@@ -24,7 +27,7 @@ app.listen(3000, async () => {
     // Verificando se o arquivo existe
     try {
         // Realizando a leitura, como utilizamos promises, iremos usar o async await
-        await readFile("accounts.json");
+        await readFile(global.fileName);
         // Verificar se o arquivo .json que iremos armazenar os dados existe, senão criando o mesmo.
         console.log("API Started!");
     } catch (err) {
@@ -34,7 +37,7 @@ app.listen(3000, async () => {
             accounts: []
         }
         // Criando o arquivo. Utilizando JSON.stringify, para converter a estrutura JSON em arquivo .json
-        writeFile("accounts.json", JSON.stringify(initialJson)).then(() => {
+        writeFile(global.fileName, JSON.stringify(initialJson)).then(() => {
             // Verificar se o arquivo .json que iremos armazenar os dados existe, senão criando o mesmo.
             console.log("API Started and File Created!");
         }).catch(err => {

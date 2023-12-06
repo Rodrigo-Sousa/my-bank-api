@@ -2,9 +2,9 @@
     "nextId": 3,
     "accounts": [
         {
+            "id": 1,
             "name": "Rodrigo Sousa",
-            "balance": 300,
-            "id": 1
+            "balance": 300
         },
         {
             "id": 2,
