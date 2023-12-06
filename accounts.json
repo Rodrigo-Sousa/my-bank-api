@@ -1,10 +1,1 @@
-{
-  "nextId": 3,
-  "accounts": [
-    {
-      "id": 1,
-      "name": "Rodrigo Sousa",
-      "balance": 300
-    }
-  ]
-}
+{"nextId":5,"accounts":[{"id":1,"name":"Rodrigo Sousa","balance":300},{"id":3,"name":"Silvana Moreira","balance":4000},{"id":4,"name":"Camila Lorenço da Silva","balance":15340.5}]}

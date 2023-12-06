@@ -97,6 +97,52 @@ router.delete("/:id", async (req, res) => {
 
 });
 
+// Atualização integral de todos os dados do arquivo .json
+router.put("/", async (req, res) => {
+    try {
+
+        const account = req.body;
+        const data = JSON.parse(await readFile(global.fileName));
+
+        // Filtrar a posição que o dados que vamos atualizar está
+        const index = data.accounts.findIndex(accountFind => accountFind.id === parseInt(account.id));
+
+        data.accounts[index] = account;
+
+        // Substituindo no nosso arquivo os dados passados, na mesma posição que o arquivo desejado
+        await writeFile(global.fileName, JSON.stringify(data));
+
+        // Devolvendo os dados já alterados.
+        res.send(account);
+
+    } catch (err) {
+
+    }
+});
+
+// Atualizações parciais dos dados
+router.patch("/updateBalance", async (req, res) => {
+    try {
+
+        const account = req.body;
+        const data = JSON.parse(await readFile(global.fileName));
+
+        // Filtrar a posição que o dados que vamos atualizar está
+        const index = data.accounts.findIndex(accountFind => accountFind.id === parseInt(account.id));
+
+        // Atualizando apenas o conteúdo balance
+        data.accounts[index].balance = account.balance;
+
+        // Substituindo no nosso arquivo os dados passados, na mesma posição que o arquivo desejado
+        await writeFile(global.fileName, JSON.stringify(data));
+
+        // Devolvendo os dados já alterados.
+        res.send(data.accounts[index]);
+
+    } catch (err) {
+
+    }
+});
 
 // Exportando esta rota, para utilizarmos em outros arquivos
 export default router;
