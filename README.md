@@ -1,10 +1,10 @@
 <h1 align="center" > My Bank API </h1>
 
-![Static Badge](https://img.shields.io/badge/Status-Under_Development-green)
+![Static Badge](https://img.shields.io/badge/Status-Projeto_Em_Desenvolvimento_-green)
 
 # Índice
 
-* [Descrição do Projeto](#-Descrição-do-Projeto)
+* [Descrição do Projeto](#Descrição-do-Projeto)
 * [Status do Projeto]()
 * [Tecnologias utilizadas]()
 * [Licença]()
