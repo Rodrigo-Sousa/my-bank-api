@@ -20,6 +20,10 @@ Desenvover uma API, simulando a aplicação de um banco. Nesta API, iremos contr
 - Name: Nome da conta (da pessoa dona daquela conta).
 - Balance: O saldo atual da conta.
 
+---
+
+# 🔨 Funcionalidades do projeto
+
 O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realizar as seguintes operações: 
 
 - **Criação:** Uma nova conta.
@@ -27,3 +31,20 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 - **Saque:** Sendo ele o oposto do depósito, no qual iremos atualizar o salvo, ao debitar os valores da conta.
 - **Saldo:** Iremos ter verificações, para sabermos se há saldo na conta, para poder liberar o saque, etc. Verificando assim o saldo atual da conta.
 - **Exclusão:** Excluir o registro, apagando o mesmo por completo.
+
+---
+
+# 🛠️ Abrir e rodar o projeto
+
+1. Baixar o repositório.
+2. Abrir ele pelo VsCode.
+3. Na pasta, rodar: `npm install`
+
+---
+
+# ✔️ Técnicas e tecnologias utilizadas
+
+- JavaScript
+- Node.JS
+- 
+- Insomnia
