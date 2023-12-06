@@ -9,7 +9,7 @@ const { readFile, writeFile } = fs;
 const router = express.Router();
 
 // Criando a rota para cadastrar um registro .POST
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, next) => {
     try {
         // Recebendo a requisição e armazenando na variável
         let account = req.body;
@@ -32,14 +32,13 @@ router.post("/", async (req, res) => {
 
     } catch (err) {
 
-        // Respondendo com status e mensagem de erro
-        res.status(400).send({ error: err.message });
+        next(err);
     }
 });
 
 // Método GET, retornando os usuários, mas sem o id
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
 
     try {
 
@@ -49,15 +48,15 @@ router.get("/", async (req, res) => {
         res.send(data);
 
     } catch (err) {
-        // Respondendo com status e mensagem de erro
-        res.status(400).send({ error: err.message });
+
+        next(err);
     }
 
 });
 
 // GET filtrando por ID
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", async (req, res, next) => {
 
     try {
 
@@ -70,7 +69,8 @@ router.get("/:id", async (req, res) => {
 
     } catch (err) {
         // Respondendo com status e mensagem de erro
-        res.status(400).send({ error: err.message });
+        // res.status(400).send({ error: err.message });
+        next(err);
 
     }
 
@@ -78,7 +78,7 @@ router.get("/:id", async (req, res) => {
 
 // Método delete, para realizarmos exclusão de registros.
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async (req, res, next) => {
     try {
         const data = JSON.parse(await readFile(global.fileName));
 
@@ -91,14 +91,13 @@ router.delete("/:id", async (req, res) => {
         res.end();
     } catch (err) {
 
-        res.status(400).send({ error: err.message });
-
+        next(err);
     }
 
 });
 
 // Atualização integral de todos os dados do arquivo .json
-router.put("/", async (req, res) => {
+router.put("/", async (req, res, next) => {
     try {
 
         const account = req.body;
@@ -116,12 +115,12 @@ router.put("/", async (req, res) => {
         res.send(account);
 
     } catch (err) {
-
+        next(err);
     }
 });
 
 // Atualizações parciais dos dados
-router.patch("/updateBalance", async (req, res) => {
+router.patch("/updateBalance", async (req, res, next) => {
     try {
 
         const account = req.body;
@@ -140,9 +139,14 @@ router.patch("/updateBalance", async (req, res) => {
         res.send(data.accounts[index]);
 
     } catch (err) {
-
+        next(err);
     }
 });
 
+// Tratamento de erro
+router.use((err, req, res, next) => {
+    // Fazendo o tratamento de erro
+    res.status(400).send({ error: err.message });
+});
 // Exportando esta rota, para utilizarmos em outros arquivos
 export default router;
