@@ -7,12 +7,14 @@ import acoountsRouter from "./routes/accounts.js";
 // Importando o file system, para podermos trabalhar com a manipulação de arquivos.
 import { promises as fs} from "fs";
 
+
 // Deestruturando as funções de leitura e escrita do file system. Podendo utilizar cada uma das variáveis sozinhas
 const { readFile, writeFile } = fs;
 
 // Instanciando o express
 const app = express();
-
+// Variável global
+global.fileName = "accounts.json";
 // Solicitando ao express que utilize JSON, para as requisições que iremos utilizar.
 app.use(express.json());
 
@@ -28,6 +30,14 @@ app.listen(3000, async ()=>{
         // Verificar se o arquivo .json que iremos armazenar os dados existe, senão criando o mesmo.
         console.log("API Started!");
     }catch (err){
+app.listen(3000, async () => {
+    // Verificando se o arquivo existe
+    try {
+        // Realizando a leitura, como utilizamos promises, iremos usar o async await
+        await readFile(global.fileName);
+        // Verificar se o arquivo .json que iremos armazenar os dados existe, senão criando o mesmo.
+        console.log("API Started!");
+    } catch (err) {
         // Variável para iniciar o arquivo JSON, como uma estrutura básica
         const initialJson = {
             nextId: 1,
@@ -41,5 +51,11 @@ app.listen(3000, async ()=>{
             console.log(err);
         });
     }
-    
+        writeFile(global.fileName, JSON.stringify(initialJson)).then(() => {
+            // Verificar se o arquivo .json que iremos armazenar os dados existe, senão criando o mesmo.
+            console.log("API Started and File Created!");
+        }).catch(err => {
+            console.log(err);
+        });
+    }
 });

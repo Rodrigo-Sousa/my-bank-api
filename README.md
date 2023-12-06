@@ -39,6 +39,7 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 1. Baixar o repositório.
 2. Abrir ele pelo VsCode.
 3. Na pasta, rodar: `npm install`
+4. Rodar no terminal: `nodemon index.js `
 
 ---
 
@@ -46,5 +47,4 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 
 - JavaScript
 - Node.JS
-- 
 - Insomnia
