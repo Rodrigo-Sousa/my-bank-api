@@ -5,8 +5,9 @@
 # Índice
 
 * [Descrição do Projeto](#Descrição-do-Projeto)
-* [Status do Projeto]()
-* [Tecnologias utilizadas]()
+* [Funcionalidades do projeto](#Funcionalidades-do-projeto)
+* [Abrir e rodar o projeto](#Abrir-e-rodar-o-projeto)
+* [Tecnologias utilizadas](#Tecnologias-utilizadas)
 * [Licença]()
 * [Conslusão]()
 
@@ -43,7 +44,7 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 
 ---
 
-# ✔️ Técnicas e tecnologias utilizadas
+# ✔️ Tecnologias utilizadas
 
 - JavaScript
 - Node.JS
