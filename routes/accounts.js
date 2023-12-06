@@ -55,6 +55,26 @@ router.get("/", async (req, res) => {
 
 });
 
+// GET filtrando por ID
+
+router.get("/:id", async (req, res) => {
+
+    try {
+        const data = JSON.parse(await readFile(global.fileName));
+
+        // Buscando dentro da variável data. o id passado na requisição. Pegando o id, que venho pela requisição
+       const accountFind = data.accounts.find(account => account.id === parseInt(req.params.id));
+        
+        res.send(accountFind);
+
+    } catch (err) {
+        // Respondendo com status e mensagem de erro
+        res.status(400).send({ error: err.message });
+
+    }
+
+});
+
 
 // Exportando esta rota, para utilizarmos em outros arquivos
 export default router;
