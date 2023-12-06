@@ -23,7 +23,7 @@ Desenvover uma API, simulando a aplicação de um banco. Nesta API, iremos contr
 
 ---
 
-# 🔨 Funcionalidades do projeto
+# Funcionalidades do projeto 🔨
 
 O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realizar as seguintes operações: 
 
@@ -35,7 +35,7 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 
 ---
 
-# 🛠️ Abrir e rodar o projeto
+# Abrir e rodar o projeto 🛠️
 
 1. Baixar o repositório.
 2. Abrir ele pelo VsCode.
@@ -44,7 +44,7 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 
 ---
 
-# ✔️ Tecnologias utilizadas
+# Tecnologias utilizadas ✔️
 
 - JavaScript
 - Node.JS
