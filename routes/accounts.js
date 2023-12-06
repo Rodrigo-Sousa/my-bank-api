@@ -1,13 +1,6 @@
 // Importando o express
 import express from "express";
 
-// Criando o objeto para o roteador
-
-const router = express.Router();
-
-// Exportando esta rota, para utilizarmos em outros arquivos
-import express from "express";
-
 import { promises as fs } from "fs";
 
 const { readFile, writeFile } = fs;
@@ -67,15 +60,37 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
 
     try {
+
         const data = JSON.parse(await readFile(global.fileName));
 
         // Buscando dentro da variável data. o id passado na requisição. Pegando o id, que venho pela requisição
-       const accountFind = data.accounts.find(account => account.id === parseInt(req.params.id));
-        
+        const accountFind = data.accounts.find(account => account.id === parseInt(req.params.id));
+
         res.send(accountFind);
 
     } catch (err) {
         // Respondendo com status e mensagem de erro
+        res.status(400).send({ error: err.message });
+
+    }
+
+});
+
+// Método delete, para realizarmos exclusão de registros.
+
+router.delete("/:id", async (req, res) => {
+    try {
+        const data = JSON.parse(await readFile(global.fileName));
+
+        // No data.accounts, ele irá receber o filtro, dos id's, que são diferentes do que o passado por parâmetro. Filtrando o id passado, no arquivo .json. Só retornando, quando a condição for verdadeira
+        data.accounts = data.accounts.filter(account => account.id !== parseInt(req.params.id));
+
+        // Escrevendo no arquivo com a remoção dos dados passados pelo id, mantendo o nosso arquivo .json identado
+        await writeFile(global.fileName, JSON.stringify(data, null, 2));
+
+        res.end();
+    } catch (err) {
+
         res.status(400).send({ error: err.message });
 
     }
