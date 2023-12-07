@@ -30,6 +30,9 @@ router.post("/", async (req, res, next) => {
         res.send(account);
         // res.end();
 
+        // Armazenando no log quando a obtido sucesso
+        logger.info(`POST /account - ${JSON.stringify(account)}`);
+
     } catch (err) {
 
         next(err);
@@ -47,6 +50,7 @@ router.get("/", async (req, res, next) => {
         delete data.nextId;
         res.send(data);
 
+        logger.info("GET /account");
     } catch (err) {
 
         next(err);
@@ -66,6 +70,7 @@ router.get("/:id", async (req, res, next) => {
         const accountFind = data.accounts.find(account => account.id === parseInt(req.params.id));
 
         res.send(accountFind);
+        logger.info("GET /account/:id");
 
     } catch (err) {
         // Respondendo com status e mensagem de erro
@@ -89,6 +94,7 @@ router.delete("/:id", async (req, res, next) => {
         await writeFile(global.fileName, JSON.stringify(data, null, 2));
 
         res.end();
+        logger.info(`DELETE /account/:id - ${req.params.id}`);
     } catch (err) {
 
         next(err);
@@ -113,6 +119,7 @@ router.put("/", async (req, res, next) => {
 
         // Devolvendo os dados já alterados.
         res.send(account);
+        logger.info(`PUT /account - ${JSON.stringify(account)}`);
 
     } catch (err) {
         next(err);
@@ -137,6 +144,7 @@ router.patch("/updateBalance", async (req, res, next) => {
 
         // Devolvendo os dados já alterados.
         res.send(data.accounts[index]);
+        logger.info(`PATCH /account/updateBalance - ${JSON.stringify(account)}`);
 
     } catch (err) {
         next(err);
@@ -145,6 +153,7 @@ router.patch("/updateBalance", async (req, res, next) => {
 
 // Tratamento de erro
 router.use((err, req, res, next) => {
+    global.logger.error(` ${req.method} ${req.baseUrl} - ${err.message}`);
     // Fazendo o tratamento de erro
     res.status(400).send({ error: err.message });
 });

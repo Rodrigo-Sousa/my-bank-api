@@ -48,4 +48,6 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 
 - JavaScript
 - Node.JS
+- Pacote Winston, para gravação de logging
+- Pacote Express
 - Insomnia

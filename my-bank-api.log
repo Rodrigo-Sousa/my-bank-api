@@ -1,0 +1,21 @@
+2023-12-07T14:24:12.606Z [my-bank-api] info: API Started!
+2023-12-07T14:25:01.163Z [my-bank-api] info: API Started!
+2023-12-07T14:25:17.299Z [my-bank-api] info: API Started!
+2023-12-07T14:27:35.143Z [my-bank-api] info: API Started!
+2023-12-07T14:32:36.886Z [my-bank-api] info: API Started!
+2023-12-07T14:34:51.337Z [my-bank-api] info: API Started!
+2023-12-07T14:37:29.484Z [my-bank-api] info: API Started!
+2023-12-07T14:48:38.718Z [my-bank-api] info: API Started!
+2023-12-07T14:51:21.448Z [my-bank-api] error:  GET /account - ENOENT: no such file or directory, open 'C:\Users\rodrigo.sousa\Documents\my-bank-api\accounts.json'
+2023-12-07T14:54:34.805Z [my-bank-api] info: API Started!
+2023-12-07T14:55:34.654Z [my-bank-api] info: API Started!
+2023-12-07T14:57:03.510Z [my-bank-api] info: API Started!
+2023-12-07T14:57:55.319Z [my-bank-api] info: API Started!
+2023-12-07T14:58:23.388Z [my-bank-api] info: API Started!
+2023-12-07T14:58:26.103Z [my-bank-api] info: API Started!
+2023-12-07T14:58:44.693Z [my-bank-api] info: API Started!
+2023-12-07T14:58:59.294Z [my-bank-api] info: API Started!
+2023-12-07T14:59:09.692Z [my-bank-api] info: GET /account
+2023-12-07T16:24:58.162Z [my-bank-api] info: GET /account/:id
+2023-12-07T16:26:39.189Z [my-bank-api] info: GET /account/:id
+2023-12-07T16:26:53.624Z [my-bank-api] info: PATCH /account/updateBalance - {"id":4,"balance":15340.5}
