@@ -13,12 +13,23 @@ router.post("/", async (req, res, next) => {
     try {
         // Recebendo a requisição e armazenando na variável
         let account = req.body;
+
+        // Validando campos
+        if (!account.name || account.balance == null) {
+            // se não tivermos os dados do nome ou do salvo, emitir um erro
+            throw new Error("Name e Balance são obrigatórios");
+        }
+
         // Lendo o conteúdo da variável recebido, pela request. Lendo o array das contas, e salvando ele na memória de uma variável novamente. 
         const data = JSON.parse(await readFile(global.fileName));
         // Convertendo o conteúdo JSON.
 
         // Campo id. Passando o id incrementado
-        account = { id: data.nextId++, ...account };
+        account = {
+            id: data.nextId++,
+            name: account.name,
+            balance: account.balance
+        };
 
         // Incluindo a nova conta, no array
         data.accounts.push(account);
@@ -107,15 +118,31 @@ router.put("/", async (req, res, next) => {
     try {
 
         const account = req.body;
+
+
+        // Validando campos
+        if (!account.id || !account.name || account.balance == null) {
+            // se não tivermos os dados do nome ou do salvo, emitir um erro
+            throw new Error("Id, name e Balance são obrigatórios");
+        }
+
+
         const data = JSON.parse(await readFile(global.fileName));
 
         // Filtrar a posição que o dados que vamos atualizar está
         const index = data.accounts.findIndex(accountFind => accountFind.id === parseInt(account.id));
 
-        data.accounts[index] = account;
+        // Validando se o index é maior que -1
+        if (index === -1) {
+            throw new Error("Registro não encontrado.");
+        }
+
+        // Só atualizando campos específicos
+        data.accounts[index].name = account.name;
+        data.accounts[index].balance = account.balance;
 
         // Substituindo no nosso arquivo os dados passados, na mesma posição que o arquivo desejado
-        await writeFile(global.fileName, JSON.stringify(data));
+        await writeFile(global.fileName, JSON.stringify(data, null, 2));
 
         // Devolvendo os dados já alterados.
         res.send(account);
@@ -136,11 +163,22 @@ router.patch("/updateBalance", async (req, res, next) => {
         // Filtrar a posição que o dados que vamos atualizar está
         const index = data.accounts.findIndex(accountFind => accountFind.id === parseInt(account.id));
 
+        // Validando campos
+        if (!account.id || account.balance == null) {
+            // se não tivermos os dados do nome ou do salvo, emitir um erro
+            throw new Error("Id e Balance são obrigatórios");
+        }
+
+        // Validando se o index é maior que -1
+        if (index === -1) {
+            throw new Error("Registro não encontrado.");
+        }
+
         // Atualizando apenas o conteúdo balance
         data.accounts[index].balance = account.balance;
 
         // Substituindo no nosso arquivo os dados passados, na mesma posição que o arquivo desejado
-        await writeFile(global.fileName, JSON.stringify(data));
+        await writeFile(global.fileName, JSON.stringify(data, null, 2));
 
         // Devolvendo os dados já alterados.
         res.send(data.accounts[index]);

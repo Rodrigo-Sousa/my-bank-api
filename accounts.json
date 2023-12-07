@@ -1,1 +1,35 @@
-{"nextId":5,"accounts":[{"id":1,"name":"Rodrigo Sousa","balance":300},{"id":3,"name":"Silvana Moreira","balance":4000},{"id":4,"name":"Camila Lorenço da Silva","balance":15340.5}]}
+{
+  "nextId": 9,
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Rodrigo Sousa",
+      "balance": 300
+    },
+    {
+      "id": 3,
+      "name": "Silvana Moreira",
+      "balance": 4000
+    },
+    {
+      "id": 4,
+      "name": "Camila Lorenço da Silva",
+      "balance": 25340.5
+    },
+    {
+      "id": 5,
+      "name": "Felipe Machado",
+      "balance": 340.5
+    },
+    {
+      "id": 7,
+      "name": "Renata Silva",
+      "balance": 1340.5
+    },
+    {
+      "id": 8,
+      "name": "Michelli Salton",
+      "balance": 400.56
+    }
+  ]
+}

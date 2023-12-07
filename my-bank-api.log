@@ -19,3 +19,45 @@
 2023-12-07T16:24:58.162Z [my-bank-api] info: GET /account/:id
 2023-12-07T16:26:39.189Z [my-bank-api] info: GET /account/:id
 2023-12-07T16:26:53.624Z [my-bank-api] info: PATCH /account/updateBalance - {"id":4,"balance":15340.5}
+2023-12-07T19:20:20.058Z [my-bank-api] info: API Started!
+2023-12-07T19:21:15.541Z [my-bank-api] info: API Started!
+2023-12-07T19:22:00.313Z [my-bank-api] info: API Started!
+2023-12-07T19:22:02.480Z [my-bank-api] info: API Started!
+2023-12-07T19:22:48.961Z [my-bank-api] info: API Started!
+2023-12-07T19:23:35.181Z [my-bank-api] info: API Started!
+2023-12-07T19:24:14.086Z [my-bank-api] info: POST /account - {"id":5,"name":"Felipe Machado","balance":340.5}
+2023-12-07T19:24:29.879Z [my-bank-api] error:  POST /account - Name e Balance são obrigatórios
+2023-12-07T19:26:36.332Z [my-bank-api] info: API Started!
+2023-12-07T19:27:34.023Z [my-bank-api] info: POST /account - {"id":7,"name":"Renata Silva","balance":40}
+2023-12-07T19:27:41.970Z [my-bank-api] error:  POST /account - Name e Balance são obrigatórios
+2023-12-07T19:28:00.725Z [my-bank-api] info: API Started!
+2023-12-07T19:28:36.882Z [my-bank-api] info: API Started!
+2023-12-07T19:29:42.702Z [my-bank-api] info: API Started!
+2023-12-07T19:29:53.146Z [my-bank-api] info: API Started!
+2023-12-07T19:30:12.255Z [my-bank-api] error:  POST /account - Name e Balance são obrigatórios
+2023-12-07T19:31:54.406Z [my-bank-api] error:  POST /account - Name e Balance são obrigatórios
+2023-12-07T19:32:15.560Z [my-bank-api] info: POST /account - {"id":8,"name":"Michelli Salton","balance":400.56}
+2023-12-07T19:33:39.877Z [my-bank-api] info: API Started!
+2023-12-07T19:34:05.232Z [my-bank-api] info: API Started!
+2023-12-07T19:34:28.902Z [my-bank-api] info: API Started!
+2023-12-07T19:34:30.218Z [my-bank-api] info: API Started!
+2023-12-07T19:34:46.070Z [my-bank-api] info: API Started!
+2023-12-07T19:34:51.828Z [my-bank-api] info: API Started!
+2023-12-07T19:35:17.282Z [my-bank-api] error:  PUT /account - Registro não encontrado.
+2023-12-07T19:36:17.889Z [my-bank-api] info: API Started!
+2023-12-07T19:36:37.107Z [my-bank-api] error:  PUT /account - Name e Balance são obrigatórios
+2023-12-07T19:37:24.704Z [my-bank-api] error:  PUT /account - Name e Balance são obrigatórios
+2023-12-07T19:37:32.077Z [my-bank-api] info: PUT /account - {"id":7,"name":"Renata Silva","balance":1340.5}
+2023-12-07T19:38:10.630Z [my-bank-api] info: API Started!
+2023-12-07T19:38:29.548Z [my-bank-api] info: API Started!
+2023-12-07T19:39:19.939Z [my-bank-api] info: API Started!
+2023-12-07T19:39:38.797Z [my-bank-api] error:  PATCH /account - Registro não encontrado.
+2023-12-07T19:39:56.588Z [my-bank-api] info: PATCH /account/updateBalance - {"id":4,"balance":5340.5}
+2023-12-07T19:40:13.671Z [my-bank-api] info: API Started!
+2023-12-07T19:41:01.164Z [my-bank-api] info: API Started!
+2023-12-07T19:41:11.866Z [my-bank-api] info: API Started!
+2023-12-07T19:41:23.470Z [my-bank-api] info: API Started!
+2023-12-07T19:41:36.384Z [my-bank-api] error:  PATCH /account - Id e Balance são obrigatórios
+2023-12-07T19:41:45.404Z [my-bank-api] error:  PATCH /account - Id e Balance são obrigatórios
+2023-12-07T19:41:47.957Z [my-bank-api] info: PATCH /account/updateBalance - {"id":4,"balance":25340.5}
+2023-12-07T19:42:31.437Z [my-bank-api] info: API Started!
