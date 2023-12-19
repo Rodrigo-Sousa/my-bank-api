@@ -35,7 +35,7 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 
 ---
 
-# Abrir e rodar o projeto 🛠️
+# Abrir e rodar o projeto
 
 1. Baixar o repositório.
 2. Abrir ele pelo VsCode.
@@ -44,7 +44,7 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 
 ---
 
-# Tecnologias utilizadas ✔️
+# Tecnologias utilizadas
 
 - JavaScript
 - Node.JS
