@@ -10,6 +10,12 @@ import acoountsRouter from "./routes/accounts.js";
 // Importando a biblioteca cors
 import cors from "cors";
 
+// Importando a biblioteca swagger
+import swaggerUi from "swagger-ui-express";
+
+// Importando o arquivo swaggerDocument
+import {swaggerDocument} from "./docs/docs.js";
+
 // Importando o file system, para podermos trabalhar com a manipulação de arquivos.
 import { promises as fs } from "fs";
 
@@ -44,7 +50,10 @@ global.logger = winston.createLogger({
 // Solicitando ao express que utilize JSON, para as requisições que iremos utilizar.
 app.use(express.json());
 // Liberando todos os endpoints
-// app.use(cors());
+app.use(cors()); 
+
+// Informando a rota que iremos utilizar para exibir a documentação
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Associando o nosso router a instância do Express
 app.use("/account", acoountsRouter);

@@ -5,8 +5,6 @@ import { promises as fs } from "fs";
 
 const { readFile, writeFile } = fs;
 
-import cors from "cors";
-
 // Criando o objeto para o roteador
 const router = express.Router();
 
@@ -52,9 +50,9 @@ router.post("/", async (req, res, next) => {
     }
 });
 
-// Método GET, retornando os usuários, mas sem o id. Liberando o endpoint "/" via método get, para o cors
+// Método GET, retornando os usuários, mas sem o id.
 
-router.get("/", cors(), async (req, res, next) => {
+router.get("/", async (req, res, next) => {
 
     try {
 

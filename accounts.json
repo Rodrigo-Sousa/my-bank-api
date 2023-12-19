@@ -1,10 +1,10 @@
 {
-  "nextId": 12,
+  "nextId": 13,
   "accounts": [
     {
       "id": 1,
       "name": "Rodrigo Sousa",
-      "balance": 300
+      "balance": 1300
     },
     {
       "id": 3,
@@ -40,6 +40,11 @@
       "id": 11,
       "name": "Ricardo Silvero",
       "balance": 400.56
+    },
+    {
+      "id": 12,
+      "name": "Samanta Barbosa",
+      "balance": 43.78
     }
   ]
 }

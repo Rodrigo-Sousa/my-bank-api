@@ -50,4 +50,6 @@ O nosso desenvolvimento será realizado seguinte estes 3 campos. E iremos realiz
 - Node.JS
 - Pacote Winston, para gravação de logging
 - Pacote Express
+- Pacote CORS
+- Swagger UI Express
 - Insomnia
