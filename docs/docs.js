@@ -2,15 +2,15 @@ export const swaggerDocument =
 {
     "swagger": "2.0",
     "info": {
-        "title": "My Bank API description",
-        "description": "API, which performs CRUD, simulating the administration of an account, to update the bank balance, the customer's name, along with the possibility of deleting the account.",
+        "title": "Descrição de como utilizar a API my-bank-api",
+        "description": "Desenvolvido uma API, que simula alguma das funções de uma conta bancária, como a criação de uma conta, com o nome, saldo e o id. Sendo possível realizar a atualização do saldo (deposito, débito), atualização do nome do cliente e exclusão da conta.",
         "version": "1.0.0"
     },
     "host": "localhost:3000",
     "tags": [
         {
             "name": "account",
-            "description": "Account management"
+            "description": "Administração da conta dos clientes"
         }
     ],
     "paths": {
@@ -19,14 +19,14 @@ export const swaggerDocument =
                 "tags": [
                     "account"
                 ],
-                "summary": "Get existing accounts",
-                "description": "Displaying accounts that are already in the file/system",
+                "summary": "Listando todos as contas",
+                "description": "Exibindo todas as contas que está cadastradas no sistema.",
                 "produces": [
                     "application/json"
                 ],
                 "responses": {
                     "200": {
-                        "description": "successful operation",
+                        "description": "Operação realizada com sucesso",
                         "schema": {
                             "type": "array",
                             "items": {
@@ -35,7 +35,7 @@ export const swaggerDocument =
                         }
                     },
                     "400": {
-                        "description": "Error occurred"
+                        "description": "Ocorreu um erro"
                     }
                 }
             },
@@ -43,8 +43,8 @@ export const swaggerDocument =
                 "tags": [
                     "account"
                 ],
-                "summary": "Create a new account",
-                "description": "Create a new account with the received parameters",
+                "summary": "Cadastrando uma nova conta",
+                "description": "Cadastrando uma nova conta, sendo necessário informar os parâmetros obrigatórios, para ser cadastrado a nova conta.",
                 "consumes": [
                     "application/json"
                 ],
@@ -61,10 +61,10 @@ export const swaggerDocument =
                 ],
                 "responses": {
                     "200": {
-                        "description": "Account created"
+                        "description": "Conta cadastrada com sucesso."
                     },
                     "400": {
-                        "description": "Error occurred"
+                        "description": "Ocorreu um erro"
                     }
                 }
             },
@@ -72,8 +72,8 @@ export const swaggerDocument =
                 "tags": [
                     "account"
                 ],
-                "summary": "Full registry update",
-                "description": "Update the data completely.",
+                "summary": "Atualizar todos os registros informado",
+                "description": "Atualizar os dados completos do registro informado.",
                 "consumes": [
                     "application/json"
                 ],
@@ -82,7 +82,7 @@ export const swaggerDocument =
                         "in": "body",
                         "id": "body",
                         "name": "body",
-                        "description": "Account details, updated",
+                        "description": "Dados da conta, atualizados",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/PutAccount"
@@ -91,10 +91,10 @@ export const swaggerDocument =
                 ],
                 "responses": {
                     "200": {
-                        "description": "Account created"
+                        "description": "Dados atualizados"
                     },
                     "400": {
-                        "description": "Error occurred"
+                        "description": "Ocorreu um erro"
                     }
                 }
             },
@@ -104,8 +104,8 @@ export const swaggerDocument =
                 "tags": [
                     "account"
                 ],
-                "summary": "Update account balance",
-                "description": "Update account balance only.",
+                "summary": "Atualizado o saldo da conta.",
+                "description": "Atualizando o saldo da conta, podendo ser um 'deposito' ou 'debito'",
                 "consumes": [
                     "application/json"
                 ],
@@ -123,10 +123,10 @@ export const swaggerDocument =
                 ],
                 "responses": {
                     "200": {
-                        "description": "Balance updated successfully"
+                        "description": "Saldo atualizado com sucesso"
                     },
                     "400": {
-                        "description": "Error occurred"
+                        "description": "Ocorreu um erro"
                     }
                 }
             }
@@ -136,7 +136,7 @@ export const swaggerDocument =
                 "tags": [
                     "account"
                 ],
-                "summary": "Delete a record",
+                "summary": "Excluindo um registro",
                 "description": "Excluir um registro permanentemente, do arquivo/sistema.",
                 "consumes": [
                     "application/json"
@@ -145,7 +145,7 @@ export const swaggerDocument =
                     {
                         "in": "path",
                         "name": "id",
-                        "description": "Delete the employee's record, with the id provided",
+                        "description": "Excluir um registro do cliente, ao passar o id desejado.",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Delete"
@@ -154,10 +154,10 @@ export const swaggerDocument =
                 ],
                 "responses": {
                     "200": {
-                        "description": "Account deleted successfully"
+                        "description": "Contado apagada com sucesso."
                     },
                     "400": {
-                        "description": "Error occurred"
+                        "description": "Ocorreu um erro"
                     }
                 }
             }
