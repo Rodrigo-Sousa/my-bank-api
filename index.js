@@ -7,6 +7,9 @@ import winston from "winston";
 // Importando a rota Accounts
 import acoountsRouter from "./routes/accounts.js";
 
+// Importando a biblioteca cors
+import cors from "cors";
+
 // Importando o file system, para podermos trabalhar com a manipulação de arquivos.
 import { promises as fs } from "fs";
 
@@ -40,9 +43,13 @@ global.logger = winston.createLogger({
 
 // Solicitando ao express que utilize JSON, para as requisições que iremos utilizar.
 app.use(express.json());
+// Liberando todos os endpoints
+// app.use(cors());
 
 // Associando o nosso router a instância do Express
 app.use("/account", acoountsRouter);
+// Servindo arquivos estáticos, a página HTML
+app.use(express.static("public"));
 
 // Iniciando a API.
 app.listen(3000, async () => {
