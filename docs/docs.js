@@ -97,6 +97,69 @@ export const swaggerDocument =
                         "description": "Error occurred"
                     }
                 }
+            },
+        },
+        "/account/updateBalance": {
+            "patch": {
+                "tags": [
+                    "account"
+                ],
+                "summary": "Update account balance",
+                "description": "Update account balance only.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "id": "body",
+                        "balance": "body",
+                        "description": "Account object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PatchAccount"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Balance updated successfully"
+                    },
+                    "400": {
+                        "description": "Error occurred"
+                    }
+                }
+            }
+        },
+        "/account/{id}": {
+            "delete": {
+                "tags": [
+                    "account"
+                ],
+                "summary": "Delete a record",
+                "description": "Excluir um registro permanentemente, do arquivo/sistema.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "Delete the employee's record, with the id provided",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Delete"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Account deleted successfully"
+                    },
+                    "400": {
+                        "description": "Error occurred"
+                    }
+                }
             }
         }
     },
@@ -128,6 +191,28 @@ export const swaggerDocument =
                 "balance": {
                     "type": "number",
                     "example": 1300
+                }
+            }
+        },
+        "PatchAccount": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "balance": {
+                    "type": "number",
+                    "example": 4300
+                }
+            }
+        },
+        "Delete": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
                 }
             }
         }
