@@ -113,7 +113,7 @@ export const swaggerDocument =
                     {
                         "in": "body",
                         "id": "body",
-                        "balance": "body",
+                        "name": "body",
                         "description": "Account object",
                         "required": true,
                         "schema": {
@@ -187,6 +187,19 @@ export const swaggerDocument =
                 "name": {
                     "type": "string",
                     "example": "Rodrigo da Silva Sousa"
+                },
+                "balance": {
+                    "type": "number",
+                    "example": 1300
+                }
+            }
+        },
+        "PatchAccount2": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 1
                 },
                 "balance": {
                     "type": "number",

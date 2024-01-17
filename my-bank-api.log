@@ -224,3 +224,38 @@
 2023-12-19T19:34:33.345Z [my-bank-api] info: GET /account
 2024-01-15T23:45:33.911Z [my-bank-api] info: API Started!
 2024-01-15T23:45:48.237Z [my-bank-api] info: GET /account
+2024-01-17T19:09:29.565Z [my-bank-api] info: API Started!
+2024-01-17T19:10:25.479Z [my-bank-api] info: GET /account
+2024-01-17T19:11:15.125Z [my-bank-api] info: GET /account
+2024-01-17T19:11:40.109Z [my-bank-api] info: POST /account - {"id":12,"name":"Ricardo Pereira","balance":1300}
+2024-01-17T19:12:04.042Z [my-bank-api] info: PUT /account - {"id":1,"name":"Rodrigo S. Sousa","balance":350}
+2024-01-17T19:12:12.539Z [my-bank-api] info: GET /account
+2024-01-17T19:12:43.674Z [my-bank-api] info: DELETE /account/:id - 12
+2024-01-17T19:12:49.634Z [my-bank-api] info: GET /account
+2024-01-17T19:15:14.484Z [my-bank-api] info: PATCH /account/updateBalance - {"id":1,"balance":5340.5}
+2024-01-17T19:16:31.241Z [my-bank-api] info: API Started!
+2024-01-17T19:19:50.506Z [my-bank-api] info: API Started!
+2024-01-17T19:20:13.209Z [my-bank-api] info: API Started!
+2024-01-17T19:20:15.622Z [my-bank-api] info: API Started!
+2024-01-17T19:20:18.579Z [my-bank-api] info: API Started!
+2024-01-17T19:20:19.406Z [my-bank-api] info: API Started!
+2024-01-17T19:20:20.398Z [my-bank-api] info: API Started!
+2024-01-17T19:20:42.984Z [my-bank-api] info: API Started!
+2024-01-17T19:21:14.899Z [my-bank-api] info: API Started!
+2024-01-17T19:22:00.541Z [my-bank-api] info: API Started!
+2024-01-17T19:22:16.645Z [my-bank-api] info: API Started!
+2024-01-17T19:22:18.025Z [my-bank-api] info: API Started!
+2024-01-17T19:24:05.983Z [my-bank-api] info: API Started!
+2024-01-17T19:24:14.614Z [my-bank-api] info: API Started!
+2024-01-17T19:25:05.348Z [my-bank-api] info: API Started!
+2024-01-17T19:25:22.444Z [my-bank-api] info: API Started!
+2024-01-17T19:25:30.563Z [my-bank-api] info: API Started!
+2024-01-17T19:26:20.300Z [my-bank-api] info: API Started!
+2024-01-17T19:26:37.713Z [my-bank-api] info: API Started!
+2024-01-17T19:26:48.721Z [my-bank-api] info: API Started!
+2024-01-17T19:27:02.050Z [my-bank-api] info: PATCH /account/updateBalance - {"id":1,"balance":1300}
+2024-01-17T19:27:21.708Z [my-bank-api] info: API Started!
+2024-01-17T19:27:38.442Z [my-bank-api] info: API Started!
+2024-01-17T19:27:58.949Z [my-bank-api] info: PATCH /account/updateBalance - {"id":1,"balance":12300}
+2024-01-17T19:29:30.143Z [my-bank-api] info: API Started!
+2024-01-17T19:29:38.293Z [my-bank-api] info: PATCH /account/updateBalance - {"id":1,"balance":4300}
