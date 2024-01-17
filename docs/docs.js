@@ -194,19 +194,6 @@ export const swaggerDocument =
                 }
             }
         },
-        "PatchAccount2": {
-            "type": "object",
-            "properties": {
-                "id": {
-                    "type": "integer",
-                    "example": 1
-                },
-                "balance": {
-                    "type": "number",
-                    "example": 1300
-                }
-            }
-        },
         "PatchAccount": {
             "type": "object",
             "properties": {
