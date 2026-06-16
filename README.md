@@ -14,7 +14,7 @@
 
 # Descrição do Projeto
 
-Desenvover uma API, simulando a aplicação de um banco. Nesta API, iremos controlar as _account's_, ou seja, as contas. As contas de usuários, possuem:
+API REST desenvolvida em Node.js para simular operações bancárias básicas, permitindo criação de contas, depósitos, saques, consulta de saldo e exclusão de registros. O projeto foi criado com foco na consolidação de conceitos de Backend, documentação de APIs e boas práticas de desenvolvimento. As contas de usuários, possuem:
 
 - Id: Sendo ele um identificador único.
 - Name: Nome da conta (da pessoa dona daquela conta).
